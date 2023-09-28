@@ -53,12 +53,16 @@ createApp ({
     },  
     timer(){
       this.timer = setInterval(() =>{
-        this.counter++
-        this.counterControl();
-      },3000)
+          this.counter++
+          this.counterControl();
+      },1000)
       
-    }  
-  },   
+    },
+     stopInterval() {
+      clearInterval(this.timer);
+    }
+   
+  }, 
   
   mounted() {
     this.timer()
