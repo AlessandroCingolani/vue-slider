@@ -40,16 +40,29 @@ createApp ({
   methods:{
     upDown(isNext){
       isNext ? this.counter++ : this.counter--;
+      this.counterControl();
+    },
+    
+
+    counterControl() {
       if(this.counter < 0){
         this.counter = this.carousel.length -1;
       }else if (this.counter === this.carousel.length ){
         this.counter = 0;
       }
+    },  
+    timer(){
+      this.timer = setInterval(() =>{
+        this.counter++
+        this.counterControl();
+      },3000)
+      
     }  
+  },   
+  
+  mounted() {
+    this.timer()
   }
-
-
-    
  
 }).mount('#app');
 
