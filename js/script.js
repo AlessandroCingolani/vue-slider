@@ -44,7 +44,7 @@ createApp ({
 
 
 
-// const images = [
+// images : [
 //   {
 //       image: 'img/01.webp',
 //       title: 'Marvel\'s Spiderman Miles Morale',
