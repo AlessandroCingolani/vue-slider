@@ -15,24 +15,28 @@
       <div class="slider">
         <div class="items-carousel">
           <div class = "block-carousel">
-            <img  src="img/01.webp">
+            <img  
+            :src="carouselImg[counter]"
+            :alt="carousel.image"
+            >
             <div class ="block-description">
-              <h3>{{counter}}</h3>
+              <h3></h3>
               <p>${element.text}</p>
             </div>
           </div>`;
         </div>
-        <div class="btn-carousel up">
+        <div @click="counter--" class="btn-carousel up">
           <i class="fa-solid fa-chevron-up"></i>
         </div>
-        <div class="btn-carousel down">
+        <div @click="counter++" class="btn-carousel down">
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="thumbnails">
           <img 
-          v-for="(images,index) in carousel"
-          :src="images.image" 
-          :alt="images.image"
+          v-for="(images,index) in carouselImg"
+          :class="{'active': counter === index}"
+          :src="images" 
+          :alt="images"
           >
         </div>
       </div>
