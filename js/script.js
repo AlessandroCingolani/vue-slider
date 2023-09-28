@@ -51,11 +51,11 @@ createApp ({
         this.counter = 0;
       }
     },  
-    timer(){
+    clock(){
       this.timer = setInterval(() =>{
           this.counter++
           this.counterControl();
-      },1000)
+      },3000)
       
     },
      stopInterval() {
@@ -65,7 +65,7 @@ createApp ({
   }, 
   
   mounted() {
-    this.timer()
+    this.clock()
   }
  
 }).mount('#app');
