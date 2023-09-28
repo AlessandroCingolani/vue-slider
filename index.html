@@ -19,21 +19,28 @@
             :src="carouselImg[counter]"
             :alt="carousel.image"
             >
-            <div class ="block-description">
-              <h3></h3>
-              <p>${element.text}</p>
+            <div  
+            v-for="(description,index) in carousel"
+            class ="block-description">
+              <h3>{{description.title[counter]}}</h3>
+              <p>{{description.text[counter]}}</p>
             </div>
-          </div>`;
+          </div>
         </div>
+
         <div @click="counter--" class="btn-carousel up">
           <i class="fa-solid fa-chevron-up"></i>
         </div>
+
         <div @click="counter++" class="btn-carousel down">
           <i class="fa-solid fa-chevron-down"></i>
         </div>
+
         <div class="thumbnails">
+          
           <img 
           v-for="(images,index) in carouselImg"
+          @click="counter = index"
           :class="{'active': counter === index}"
           :src="images" 
           :alt="images"
