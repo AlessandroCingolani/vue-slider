@@ -14,11 +14,13 @@
     <div class="container">
       <div class="slider">
         <div class="items-carousel">
-          <img  src="img/01.webp" alt="">
-          <img class="hide" src="img/02.webp" alt="">
-          <img class="hide" src="img/03.webp" alt="">
-          <img class="hide" src="img/04.webp" alt="">
-          <img class="hide" src="img/05.webp" alt="">
+          <div class = "block-carousel">
+            <img  src="img/01.webp">
+            <div class ="block-description">
+              <h3>{{counter}}</h3>
+              <p>${element.text}</p>
+            </div>
+          </div>`;
         </div>
         <div class="btn-carousel up">
           <i class="fa-solid fa-chevron-up"></i>
@@ -27,11 +29,11 @@
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="thumbnails">
-          <img src="img/01.webp" alt="">
-          <img src="img/02.webp" alt="">
-          <img src="img/03.webp" alt="">
-          <img src="img/04.webp" alt="">
-          <img src="img/05.webp" alt="">
+          <img 
+          v-for="(images,index) in carousel"
+          :src="images" 
+          alt=""
+          >
         </div>
       </div>
     </div>
