@@ -1,3 +1,17 @@
+const {createApp} = Vue;
+
+createApp ({
+  data(){
+    return{
+      
+    }
+  }
+}).mount('#app')
+
+
+
+
+
 const itemsCarousel = document.querySelector('.items-carousel');
 const btnUp = document.querySelector('.up');
 const btnDown = document.querySelector('.down');
