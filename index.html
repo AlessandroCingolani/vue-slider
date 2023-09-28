@@ -16,14 +16,14 @@
         <div class="items-carousel">
           <div class = "block-carousel">
             <img  
-            :src="carouselImg[counter]"
-            :alt="carousel.image"
+            :src="carousel[counter].image"
+            :alt="carousel[counter].image"
             >
             <div  
-            v-for="(description,index) in carousel"
+           
             class ="block-description">
-              <h3>{{description.title[counter]}}</h3>
-              <p>{{description.text[counter]}}</p>
+              <h3>{{carousel[counter].title}}</h3>
+              <p>{{carousel[counter].text}}</p>
             </div>
           </div>
         </div>
@@ -39,11 +39,11 @@
         <div class="thumbnails">
           
           <img 
-          v-for="(images,index) in carouselImg"
+          v-for="(images,index) in carousel"
           @click="counter = index"
           :class="(counter === index) ? 'active':'inactive'"
-          :src="images" 
-          :alt="images"
+          :src="images.image" 
+          :alt="images.image"
           >
         </div>
       </div>
