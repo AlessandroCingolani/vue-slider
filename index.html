@@ -12,7 +12,11 @@
   
   <div id="app" class="my-carousel">
     <div class="container">
-      <div class="slider">
+      <div 
+      @mouseover="stopInterval" 
+      @mouseleave="timer" 
+      class="slider"
+      >
         <div class="items-carousel">
           <div class = "block-carousel">
             <img  
