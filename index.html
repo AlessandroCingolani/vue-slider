@@ -41,7 +41,7 @@
           <img 
           v-for="(images,index) in carouselImg"
           @click="counter = index"
-          :class="{'active': counter === index}"
+          :class="(counter === index) ? 'active':'inactive'"
           :src="images" 
           :alt="images"
           >
